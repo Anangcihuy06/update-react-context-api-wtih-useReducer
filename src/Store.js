@@ -3,7 +3,8 @@ import { reducer } from "./reducer";
 
 const initialState = {
   movies: [],
-  favourites: []
+  favourites: [],
+  App: { sideDrawer: "false" }
 };
 
 export const Store = React.createContext(initialState);

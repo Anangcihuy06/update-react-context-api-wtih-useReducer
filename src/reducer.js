@@ -15,6 +15,11 @@ export function reducer(state, action) {
         ...state,
         favourites: action.payload
       };
+    case "SIDEDRAWER_OPEN":
+      return {
+        ...state,
+        App: { sideDrawer: action.payload }
+      };
     default:
       return state;
   }

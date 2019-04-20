@@ -26,3 +26,18 @@ export const toggleFavourites = (state, dispatch, movies) => {
     });
   }
 };
+
+export const toggleDrawer = (state, dispatch) => {
+  let drawerOpen = state.App.sideDrawer.includes(true);
+  if (drawerOpen) {
+    dispatch({
+      type: "SIDEDRAWER_OPEN",
+      payload: "false"
+    });
+  } else if (!drawerOpen) {
+    dispatch({
+      type: "SIDEDRAWER_OPEN",
+      payload: "true"
+    });
+  }
+};
